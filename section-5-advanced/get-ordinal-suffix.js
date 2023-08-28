@@ -10,7 +10,11 @@ See here for more details: https://www.grammarly.com/blog/how-to-write-ordinal-n
 */
 
 function getOrdinalSuffix(num) {
-  // your solution here
+//between 11-13 the ending rule doesn't apply
+//if num between 11 and 13 apply th rule
+// else if last digit one - st
+//                    two - nd
+//                    three -rd
 }
 
 runTest("getOrdinalSuffix() returns 'st' when given 1", function () {
