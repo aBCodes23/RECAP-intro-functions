@@ -20,5 +20,8 @@ function makeRectangle(m, n) {
 }
 
 // invoke the function below to test it
+// Array(10) creates an array of 10 items
+// .keys is an Array Iterator, the ... operator spreads the keys (arrays are secret objects so the keys are 1 - 10) into a new array
 
 makeRectangle(5, 7);
+console.log(Array(10).keys())
