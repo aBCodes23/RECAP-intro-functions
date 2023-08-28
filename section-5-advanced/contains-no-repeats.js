@@ -5,7 +5,13 @@ function containsNoRepeats(str) {
 
   //split string into array
   //create a new array of unique values (something to do with new and Set)
+  //https://dev.to/clairecodes/how-to-create-an-array-of-unique-values-in-javascript-using-sets-5dg6
   //compare lengths
+
+  const strArray = str.split('')
+  const uniqueArray = [...new Set(strArray)]
+
+  return strArray.length === uniqueArray.length
 }
 
 runTest("containsNoRepeats() returns true for an empty string", function () {
