@@ -10,11 +10,31 @@ See here for more details: https://www.grammarly.com/blog/how-to-write-ordinal-n
 */
 
 function getOrdinalSuffix(num) {
-//between 11-13 the ending rule doesn't apply
-//if num between 11 and 13 apply th rule
-// else if last digit one - st
-//                    two - nd
-//                    three -rd
+  //between 11-13 the ending rule doesn't apply
+  //if num between 11 and 13 apply th rule
+  // else if last digit one - st
+  //                    two - nd
+  //                    three -rd
+  const numToStr = num + "";
+  let strToReturn = ''
+  if (num >= 11 && num <= 13) {
+    return "th";
+  } else
+    switch (numToStr.slice(-1)) {
+      case '1':
+        strToReturn = 'st';
+        break;
+      case '2':
+        strToReturn = 'nd';
+        break;
+      case '3':
+        strToReturn = 'rd';
+        break;
+      default:
+        strToReturn = 'th';
+    }
+
+    return strToReturn
 }
 
 runTest("getOrdinalSuffix() returns 'st' when given 1", function () {
